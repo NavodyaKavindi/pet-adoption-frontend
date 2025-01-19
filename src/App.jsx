@@ -11,17 +11,10 @@ function App() {
     <Routes path="/*">
 
     <Route path="/" element={<HomePage/>}/>
+    
     <Route path="/admin/*" element={<AdminPage/>}/>
 
-    <Route path="/*" element={
-      <div className="w-full h-[100vh] bg-green-400">
-
-      </div>
-    }/>
-    <Route/>
-    <Route/>
-
-    </Routes>
+   </Routes>
     
     </BrowserRouter>
   );

@@ -3,7 +3,7 @@ const adoptions = [
         adoptionId: 1,
         animalId: 101,
         email: 'example@example.com',
-        statuse: 'pending',
+        status: 'pending',
         reason: 'Reason for Adoption',
         start: new Date('2025-01-15'),
         end: new Date('2025-02-15'),
@@ -13,7 +13,7 @@ const adoptions = [
         adoptionId: 2,
         animalId: 102,
         email: 'adoptor@example.com',
-        statuse: 'approved',
+        status: 'approved',
         reason: 'Health care',
         start: new Date('2025-01-10'),
         end: new Date('2025-03-10'),
@@ -23,7 +23,7 @@ const adoptions = [
         adoptionId: 3,
         animalId: 103,
         email: 'john.doe@example.com',
-        statuse: 'pending',
+        status: 'pending',
         reason: 'New home',
         start: new Date('2025-01-20'),
         end: new Date('2025-02-20'),
@@ -51,8 +51,36 @@ export default function AdminAdoption(){
         <tbody>
             {
                 adoptions.map(
-                    (adoption)=>{
-
+                    (adoption, index)=>{
+                        console.log(index)
+return(
+    <tr key= {adoption.adoptionId}>
+        <td>
+        {adoption.adoptionId}
+        </td>
+        <td>
+            {adoption.animalId}
+        </td>
+        <td>
+            {adoption.email}
+        </td>
+        <td>
+            {adoption.status}
+        </td>
+        <td>
+            {adoption.reason}
+        </td>
+        <td>
+            {adoption.start.toDateString()}
+        </td>
+        <td>
+            {adoption.end.toDateString()}
+        </td>
+        <td>
+            {adoption.notes}
+        </td>
+    </tr>
+)
                 }
             )
                 
